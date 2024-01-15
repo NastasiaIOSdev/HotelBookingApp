@@ -13,6 +13,7 @@
 		2EFDCC3D2B5536E200865FAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EFDCC3C2B5536E200865FAC /* Preview Assets.xcassets */; };
 		2EFDCC4A2B553ACF00865FAC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFDCC492B553ACF00865FAC /* Colors.swift */; };
 		2EFDCC4C2B553ADD00865FAC /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFDCC4B2B553ADD00865FAC /* Fonts.swift */; };
+		2EFDCC4E2B55445F00865FAC /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2EFDCC4D2B55445F00865FAC /* SF-Pro-Display-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,8 @@
 		2EFDCC3C2B5536E200865FAC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2EFDCC492B553ACF00865FAC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2EFDCC4B2B553ADD00865FAC /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		2EFDCC4D2B55445F00865FAC /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		2EFDCC4F2B5544C400865FAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +58,7 @@
 		2EFDCC342B5536D800865FAC /* BookingApp */ = {
 			isa = PBXGroup;
 			children = (
+				2EFDCC4F2B5544C400865FAC /* Info.plist */,
 				2EFDCC462B553A4400865FAC /* AboutHotel */,
 				2EFDCC482B553AAC00865FAC /* Assets */,
 				2EFDCC352B5536D800865FAC /* BookingAppApp.swift */,
@@ -117,6 +121,7 @@
 				2EFDCC392B5536E200865FAC /* Assets.xcassets */,
 				2EFDCC492B553ACF00865FAC /* Colors.swift */,
 				2EFDCC4B2B553ADD00865FAC /* Fonts.swift */,
+				2EFDCC4D2B55445F00865FAC /* SF-Pro-Display-Regular.otf */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EFDCC3D2B5536E200865FAC /* Preview Assets.xcassets in Resources */,
+				2EFDCC4E2B55445F00865FAC /* SF-Pro-Display-Regular.otf in Resources */,
 				2EFDCC3A2B5536E200865FAC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +332,7 @@
 				DEVELOPMENT_TEAM = 3VJYN6Z9BM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BookingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -355,6 +362,7 @@
 				DEVELOPMENT_TEAM = 3VJYN6Z9BM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BookingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
