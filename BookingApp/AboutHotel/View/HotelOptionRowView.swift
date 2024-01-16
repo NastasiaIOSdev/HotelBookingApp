@@ -13,8 +13,6 @@ struct HotelOptionRowView: View {
     let description: String
     
     var body: some View {
-      //  NavigationView() {
-//            VStack(spacing: 10) {
                 HStack() {
                     Image(imageName)
                     VStack(spacing: 10) {
@@ -34,8 +32,6 @@ struct HotelOptionRowView: View {
                             .navigationTitle("")
                         }
                     }
-//                }
-         //   }
         }
                 .padding(.trailing, 15)
                 .padding(.leading, 15)

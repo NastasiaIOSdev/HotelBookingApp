@@ -24,21 +24,13 @@ struct MainHotelView: View {
                             CarouselView().frame(height: 257).padding(.bottom, 8)
                             
                             RaitingNameHotelView()
-                            
-                            Text(Hotel.mockHotelData.name).font(Fonts.SFProDisplay22)
-                            
-                            NavigationLink(destination: {
-                                EmptyView()
-                            }, label: {
-                                Text(Hotel.mockHotelData.adress).font(Fonts.SFProDisplay14)
-                            }).navigationTitle("")
-                            
+                          
                             HotelPriceView(price: Hotel.mockHotelData.minimalPrice, description: Hotel.mockHotelData.priceForIt)
                             
                         }
                         .padding(.vertical, 16)
                         .padding(.horizontal, 16)
-                        .background(.white).edgesIgnoringSafeArea(.top)
+                        .background(.white)
                         .cornerRadius(12)
                         
                         // MARK: - 2 LazyVStack
@@ -101,11 +93,8 @@ struct MainHotelView: View {
                     }
                 }
             }
-          //  .padding()
             .navigationTitle("Отель")
             .navigationBarTitleDisplayMode(.inline)
-            .background(.green)
-            
         }
     }
 }
