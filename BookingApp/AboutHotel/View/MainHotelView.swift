@@ -15,7 +15,7 @@ struct MainHotelView: View {
                 ZStack{
                     Color(.systemGray6)
                         .edgesIgnoringSafeArea(.all)
-                    ScrollView{
+                    ScrollView(showsIndicators: false) {
                         
                         // MARK: - 1 LazyVStack
                         
