@@ -8,8 +8,31 @@
 import SwiftUI
 
 struct RoomsView: View {
+    @State var viewModel = RoomsViewModel(service: RoomsService())
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            NavigationStack {
+                ZStack {
+                    Color(.systemGray6)
+                        .edgesIgnoringSafeArea(.all)
+                    ScrollView(showsIndicators: false) {
+                        VStack{
+                            LazyVStack {
+                                ForEach(viewModel.listings) { listing in
+                                  RoomListingItemView(listing: listing, titleButton: "Выбрать номер")
+                                }
+                                .padding()
+                                .background(.white)
+                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                            }
+                        }
+                    }
+                    .navigationTitle("Steigenberger Makadi")
+                    .navigationBarTitleDisplayMode(.inline)
+                }
+            }
+        }
     }
 }
 

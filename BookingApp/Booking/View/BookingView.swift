@@ -14,7 +14,7 @@ enum AddTouristOptions {
 
 struct BookingView: View {
     let peice: Int = 198036
-    let titleButton: String
+   // let titleButton: String
     @State private var payIsOn = false
     @State private var selectedOption: AddTouristOptions = .addNewTourist
     
@@ -26,7 +26,7 @@ struct BookingView: View {
                         .edgesIgnoringSafeArea(.all)
                     ScrollView(showsIndicators: false) {
                         
-                        // MARK: - Блок с отелем
+// MARK: - Блок с отелем
                         LazyVStack() {
                             RaitingNameHotelView()
                         }
@@ -35,7 +35,7 @@ struct BookingView: View {
                             .background(.white)
                             .cornerRadius(12)
                         
-                        // MARK: - Блок с данными брони
+// MARK: - Блок с данными брони
                         LazyVStack() {
                             BookingInfoRowView(nameRow: "Вылет из", infoInRow: "Санкт-Петербург")
                             BookingInfoRowView(nameRow: "Страна, город", infoInRow: "Египет, Хургада")
@@ -50,7 +50,7 @@ struct BookingView: View {
                         .background(.white)
                         .cornerRadius(12)
                         
-                        // MARK: - Блок и информацией о покупателе
+// MARK: - Блок и информацией о покупателе
                         LazyVStack() {
                             InfoAboutBayerView()
                         }
@@ -59,7 +59,7 @@ struct BookingView: View {
                         .background(.white)
                         .cornerRadius(12)
                         
-                        // MARK: - Блок с информацией о туристах
+// MARK: - Блок с информацией о туристах
                         LazyVStack() {
                             VStack {
                                 if selectedOption == .watchImfoAboutTourist {
@@ -81,7 +81,7 @@ struct BookingView: View {
                         .background(.white)
                         .cornerRadius(12)
                         
-                        // MARK: - Блок добавить туриста
+// MARK: - Блок добавить туриста
                         LazyVStack() {
                             VStack {
                                 if selectedOption == .addNewTourist {
@@ -101,7 +101,7 @@ struct BookingView: View {
                         .background(.white)
                         .cornerRadius(12)
                         
-                        // MARK: - Блок с итоговой ценой
+// MARK: - Блок с итоговой ценой
                         LazyVStack() {
                             CalculatingTheTotalPriceView()
                         }
@@ -110,7 +110,7 @@ struct BookingView: View {
                         .background(.white)
                         .cornerRadius(12)
                         
-                        // MARK: - Блок Кнопка
+// MARK: - Блок Кнопка
                         LazyVStack() {
                             NavigationLink(isActive: $payIsOn) {
                                 PaymentView()
@@ -144,6 +144,6 @@ struct BookingView: View {
 
 struct BookingView_Previews: PreviewProvider {
     static var previews: some View {
-        BookingView(titleButton: "chevron.down")
+        BookingView()
     }
 }

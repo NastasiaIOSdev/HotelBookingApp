@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainHotelView: View {
+    @State private var chooseIsOn = false
     var body: some View {
         
         VStack {
@@ -17,12 +18,12 @@ struct MainHotelView: View {
                         .edgesIgnoringSafeArea(.all)
                     ScrollView(showsIndicators: false) {
                         
-                        // MARK: - 1 LazyVStack
-                        
                         LazyVStack(alignment: .leading, spacing: 8) {
                             
+// MARK: - Карусель из фотографий
                             CarouselView().frame(height: 257).padding(.bottom, 8)
                             
+// MARK: - Основные данные про отель
                             RaitingNameHotelView()
                           
                             HotelPriceView(price: Hotel.mockHotelData.minimalPrice, description: Hotel.mockHotelData.priceForIt)
@@ -33,8 +34,7 @@ struct MainHotelView: View {
                         .background(.white)
                         .cornerRadius(12)
                         
-                        // MARK: - 2 LazyVStack
-                        
+// MARK: - Подробные данные об отеле
                         LazyVStack(alignment: .leading, spacing: 16) {
                             
                             Text("Об отеле").font(Fonts.SFProDisplay22)
@@ -80,16 +80,30 @@ struct MainHotelView: View {
                         .background(.white)
                         .cornerRadius(12)
                         
-                        // MARK: - 3 LazyVStack
+// MARK: - Кнопка выбора номера
                         
-                        LazyVStack(alignment: .leading, spacing: 8) {
-                            ButtonView(titleButton: "К выбору номера")
+                        LazyVStack() {
+                            NavigationLink(isActive: $chooseIsOn) {
+                                RoomsView()
+                            } label: {
+                                Button {
+                                    chooseIsOn.toggle()
+                                } label: {
+                                    Text("К выбору номера")
+                                        .font(Fonts.SFProDisplay16)
+                                        .fontWeight(.bold)
+                                        .padding()
+                                        .foregroundStyle(.white)
+                                        .frame(maxWidth: .infinity)
+                                        .background(.blue)
+                                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                                }
+                            }
                         }
-                        .padding(.top, 12)
-                        .padding(.bottom, 28)
-                        .padding(.horizontal, 16)
-                        .background(.white)
-                        Spacer(minLength: 0)
+                            .padding(.vertical, 16)
+                            .padding(.horizontal, 16)
+                            .background(.white)
+                            .cornerRadius(12)
                     }
                 }
             }
