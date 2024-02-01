@@ -89,6 +89,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E34276C2B6B93FA004231C0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2EFDCC8A2B56DAAC00865FAC /* BookingInfoRowView.swift */,
+				2EFDCC5F2B55917B00865FAC /* HotelOptionRowView.swift */,
+				2EFDCC8C2B56E7E700865FAC /* RoomListingItemView.swift */,
+				2EFDCC7E2B568CCA00865FAC /* InfoAboutBayerView.swift */,
+				2EFDCC802B568D0800865FAC /* InfoAboutTouristView.swift */,
+				2EFDCC822B568DE500865FAC /* CalculatingTheTotalPriceView.swift */,
+				2EFDCC862B56BA7000865FAC /* CollapsedAddTouristButtonView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2E34276D2B6B9618004231C0 /* Extencions */ = {
+			isa = PBXGroup;
+			children = (
+				2EFDCC4B2B553ADD00865FAC /* Fonts.swift */,
+				2EFDCC492B553ACF00865FAC /* Colors.swift */,
+			);
+			path = Extencions;
+			sourceTree = "<group>";
+		};
 		2EFDCC292B5536D800865FAC = {
 			isa = PBXGroup;
 			children = (
@@ -110,11 +133,12 @@
 			children = (
 				2EFDCC502B554FF200865FAC /* ReusableView */,
 				2EFDCC4F2B5544C400865FAC /* Info.plist */,
-				2EFDCC462B553A4400865FAC /* AboutHotel */,
-				2EFDCC632B55B40100865FAC /* Rooms */,
-				2EFDCC6C2B55BD1200865FAC /* Booking */,
-				2EFDCC6D2B55BD2400865FAC /* Payment */,
-				2EFDCC482B553AAC00865FAC /* Assets */,
+				2EFDCC452B553A4100865FAC /* View */,
+				2EFDCC472B553A9500865FAC /* Model */,
+				2EFDCC662B55B42A00865FAC /* ViewModel */,
+				2EFDCC642B55B42000865FAC /* Service */,
+				2E34276D2B6B9618004231C0 /* Extencions */,
+				2EFDCC482B553AAC00865FAC /* Helpers */,
 				2EFDCC352B5536D800865FAC /* BookingAppApp.swift */,
 				2EFDCC372B5536D800865FAC /* ContentView.swift */,
 				2EFDCC3B2B5536E200865FAC /* Preview Content */,
@@ -130,58 +154,40 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		2EFDCC432B553A3A00865FAC /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		2EFDCC442B553A3E00865FAC /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		2EFDCC452B553A4100865FAC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2E34276C2B6B93FA004231C0 /* Components */,
 				2EFDCC512B5551D400865FAC /* MainHotelView.swift */,
-				2EFDCC5F2B55917B00865FAC /* HotelOptionRowView.swift */,
+				2EFDCC6A2B55B4A700865FAC /* RoomsView.swift */,
+				2EFDCC702B56788D00865FAC /* BookingView.swift */,
+				2EFDCC6E2B55BD7E00865FAC /* PaymentView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		2EFDCC462B553A4400865FAC /* AboutHotel */ = {
-			isa = PBXGroup;
-			children = (
-				2EFDCC472B553A9500865FAC /* Model */,
-				2EFDCC452B553A4100865FAC /* View */,
-				2EFDCC442B553A3E00865FAC /* ViewModel */,
-				2EFDCC432B553A3A00865FAC /* Service */,
-			);
-			path = AboutHotel;
 			sourceTree = "<group>";
 		};
 		2EFDCC472B553A9500865FAC /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				2EFDCC552B55568200865FAC /* Hotel.swift */,
+				2EFDCC682B55B48F00865FAC /* Rooms.swift */,
+				2EFDCC8E2B570D3500865FAC /* Listings.swift */,
+				2EFDCC902B570E6400865FAC /* ListingsPreview.swift */,
+				2EFDCC762B5687DF00865FAC /* BookingModel.swift */,
+				2EFDCC782B56887300865FAC /* Reservations.swift */,
+				2EFDCC7A2B568B0B00865FAC /* ReservationsPreview.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		2EFDCC482B553AAC00865FAC /* Assets */ = {
+		2EFDCC482B553AAC00865FAC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				2EFDCC392B5536E200865FAC /* Assets.xcassets */,
-				2EFDCC492B553ACF00865FAC /* Colors.swift */,
-				2EFDCC4B2B553ADD00865FAC /* Fonts.swift */,
 				2EFDCC4D2B55445F00865FAC /* SF-Pro-Display-Regular.otf */,
 				2EFDCC592B5579DC00865FAC /* EmptyView.swift */,
 			);
-			path = Assets;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		2EFDCC502B554FF200865FAC /* ReusableView */ = {
@@ -195,17 +201,6 @@
 			path = ReusableView;
 			sourceTree = "<group>";
 		};
-		2EFDCC632B55B40100865FAC /* Rooms */ = {
-			isa = PBXGroup;
-			children = (
-				2EFDCC652B55B42500865FAC /* Model */,
-				2EFDCC672B55B42D00865FAC /* View */,
-				2EFDCC662B55B42A00865FAC /* ViewModel */,
-				2EFDCC642B55B42000865FAC /* Service */,
-			);
-			path = Rooms;
-			sourceTree = "<group>";
-		};
 		2EFDCC642B55B42000865FAC /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,87 +209,12 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		2EFDCC652B55B42500865FAC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2EFDCC682B55B48F00865FAC /* Rooms.swift */,
-				2EFDCC8E2B570D3500865FAC /* Listings.swift */,
-				2EFDCC902B570E6400865FAC /* ListingsPreview.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		2EFDCC662B55B42A00865FAC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				2EFDCC942B57173900865FAC /* RoomsViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		2EFDCC672B55B42D00865FAC /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2EFDCC6A2B55B4A700865FAC /* RoomsView.swift */,
-				2EFDCC8C2B56E7E700865FAC /* RoomListingItemView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		2EFDCC6C2B55BD1200865FAC /* Booking */ = {
-			isa = PBXGroup;
-			children = (
-				2EFDCC752B56877000865FAC /* Model */,
-				2EFDCC742B56876D00865FAC /* View */,
-				2EFDCC732B56876A00865FAC /* ModelView */,
-				2EFDCC722B56876700865FAC /* Service */,
-			);
-			path = Booking;
-			sourceTree = "<group>";
-		};
-		2EFDCC6D2B55BD2400865FAC /* Payment */ = {
-			isa = PBXGroup;
-			children = (
-				2EFDCC6E2B55BD7E00865FAC /* PaymentView.swift */,
-			);
-			path = Payment;
-			sourceTree = "<group>";
-		};
-		2EFDCC722B56876700865FAC /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		2EFDCC732B56876A00865FAC /* ModelView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ModelView;
-			sourceTree = "<group>";
-		};
-		2EFDCC742B56876D00865FAC /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2EFDCC702B56788D00865FAC /* BookingView.swift */,
-				2EFDCC8A2B56DAAC00865FAC /* BookingInfoRowView.swift */,
-				2EFDCC7E2B568CCA00865FAC /* InfoAboutBayerView.swift */,
-				2EFDCC802B568D0800865FAC /* InfoAboutTouristView.swift */,
-				2EFDCC822B568DE500865FAC /* CalculatingTheTotalPriceView.swift */,
-				2EFDCC862B56BA7000865FAC /* CollapsedAddTouristButtonView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		2EFDCC752B56877000865FAC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2EFDCC762B5687DF00865FAC /* BookingModel.swift */,
-				2EFDCC782B56887300865FAC /* Reservations.swift */,
-				2EFDCC7A2B568B0B00865FAC /* ReservationsPreview.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -21,6 +21,7 @@ struct RaitingNameHotelView: View {
             .padding(.vertical, 5)
             .background(Color.lightOrange)
             .clipShape(RoundedRectangle(cornerRadius: 5))
+            
             Text(Hotel.mockHotelData.name).font(Fonts.SFProDisplay22)
             
             NavigationLink(destination: {
